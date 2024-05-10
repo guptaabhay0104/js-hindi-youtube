@@ -23,3 +23,12 @@ console.log(typeof(stringNumber));
 "Abhay" -> true
 
 */
+
+// *************** operations ***************
+
+console.log("1" + 2); //12
+console.log(1 + "2"); //12
+console.log("1" + 2+ 2); //122
+console.log(1 + 2+ "2"); //32
+
+//In case of more than two operands, the output will be displayed in type of the first operand.
