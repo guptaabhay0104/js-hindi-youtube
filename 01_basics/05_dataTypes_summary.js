@@ -81,3 +81,30 @@ let anotherId = Symbol('123');
 
 console.log(myId);
 console.log(anotherId);
+
+//There are two types of memories in JS:
+// 1. Stack (Primitive Data Types)
+// 2. Heap (Non-Primitive Data Types)
+
+// Note: Whenever any value assigned to any primitive data type is copied by any other primitive data type, then only a copy of the original data is assigned to it i.e. any changes done to the copy will not get reflected to the original data but for non-primitive data types, this scenario is vice-versa i.e. the original reference is assigned to the second variable.
+
+//Example-
+let dataOne = 345; 
+let dataTwo = dataOne;//345
+dataTwo = 456;
+
+console.log(dataOne);//345
+console.log(dataTwo);//456
+
+let userOne = {
+    userName : "Abhay Gupta",
+    userEmail : "abhayg1804@gmail.com"
+}
+
+let userTwo = userOne;
+
+userTwo.userEmail = "a33553@gmail.com";
+
+console.log(userOne.userEmail);//a33553@gmail.com
+console.log(userTwo.userEmail);//a33553@gmail.com
+
