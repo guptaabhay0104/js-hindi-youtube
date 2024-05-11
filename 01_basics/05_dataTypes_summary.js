@@ -75,3 +75,9 @@ console.log(typeof heroes);
 console.log(typeof myData);
 
 console.log(typeof myFunction);
+
+let myId = Symbol('123');
+let anotherId = Symbol('123');
+
+console.log(myId);
+console.log(anotherId);
