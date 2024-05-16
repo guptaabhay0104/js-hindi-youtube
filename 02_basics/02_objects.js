@@ -146,7 +146,7 @@ const Course = {
   console.log(Course.courseDuration);//This full statement is too lengthy to write everytime we want to fetch the course duration
   
   const {courseDuration} = Course;
-  const {courseDuration : duration} = Course;//duration here is aliasig name
+  const {courseDuration : duration} = Course;//duration here is aliasing name
   
   console.log(courseDuration);
   console.log(duration);
