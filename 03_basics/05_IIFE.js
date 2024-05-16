@@ -20,5 +20,4 @@
   
   ((name) => {
     console.log(`DB connected for the third time, ${name}`)
-  })('Abhay');
-  
+  })('Abhay'); 
