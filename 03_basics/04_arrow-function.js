@@ -24,7 +24,7 @@ const obj1 = {
   myfunc("Abhay")
   //If we write only this inside a function then it will return the global object
   
-  //arraw function : just remove the function keyword, add one arrow after the parenthesis and if you want, you can hold the function inside a variable
+  //arrow function : just remove the function keyword, add one arrow after the parenthesis and if you want, you can hold the function inside a variable
   
   const myfunc2 = (user_name) => {
     console.log(this);//return an empty string
