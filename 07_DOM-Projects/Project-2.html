@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+  <form action="">
+      <label for="">Height in CMs:</label><input type="text" name="" id="Height"><br>
+      <label for="">Weight in KGs:</label><input type="text" name="" id="Weight"><br>
+      <button>Calculate</button>
+      <div id="result"></div>
+  </form>
+  
+</body>
+
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const Height = parseInt(document.querySelector('#Height').value);
+    const Weight = parseInt(document.querySelector('#Weight').value);
+    const result = document.querySelector('#result');
+
+    if(Height === '' || Height <= 0 || isNaN(Height)){
+      result.innerHTML = `Please enter a valid height.`;
+    } else if(Weight === '' || Weight <= 0 || isNaN(Weight)){
+      result.innerHTML = `Please enter a valid weight.`;
+    }else{
+      const bmi = (Weight / ((Height * Height) / 10000)).toFixed(2);
+
+      result.innerHTML = `<span>Result: ${bmi}</span>`;
+    }
+  })
+  
+
+</script>
+</html>
