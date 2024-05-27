@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick the color</title>
+
+  <style>
+    .color-div{
+      display: grid;
+      column-gap: 15px;
+      grid-template-columns: 50px 50px 50px 50px;
+    }
+
+    .color-box{
+      height: 50px;
+      border: 1px solid black;
+    }
+
+    #blue{
+      background-color: blue;
+    }
+    #green{
+      background-color: green;
+    }
+    #red{
+      background-color: red;
+    }
+    #yellow{
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pick any color</h1>
+  <p>You have to pick any color from the below options and the backgound color of the webpage will occupy that color.</p>
+  <div class="color-div">
+    <span class="color-box" id="blue"></span>
+    <span class="color-box" id="green"></span>
+    <span class="color-box" id="red"></span>
+    <span class="color-box" id="yellow"></span>
+    <span class="color-box" id="purple"></span>
+
+  </div>
+  <p id="color-choice">The color you have chosen is:<span></span></p>
+</body>
+
+<script>
+  const colorBox = document.querySelectorAll('.color-box');
+  const body = document.querySelector('body');
+  const colorCoice = document.querySelector('#color-choice');
+
+  colorBox.forEach(function(cBox){
+  cBox.addEventListener('click', (e) => {
+    const color = e.target.id;
+    switch(color){
+
+      case 'blue' : body.style.backgroundColor = "blue";
+      break;
+      case 'yellow' : body.style.backgroundColor = "yellow";
+      break;
+      case 'red' : body.style.backgroundColor = "red";
+      break;
+      case 'green' : body.style.backgroundColor = "green";
+      break;
+      case 'purple' : body.style.backgroundColor = "purple";
+      break;
+      default : "No color chosen";
+      break;
+    }
+
+  })
+})
+</script>
+</html>
