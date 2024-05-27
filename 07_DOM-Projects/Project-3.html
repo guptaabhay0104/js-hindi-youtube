@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+
+  <style>
+    body {
+      background-color: #212121;
+      color: #fff;
+    }
+
+    .center{
+      display: grid;
+      row-gap: 20px;
+    }
+
+    #clock{
+      background-color: orange;
+      border: none;
+      border-radius: 5px;
+      height: 30px;
+      width: 150px;
+      color: black;
+      text-align: center;
+      font-size: large;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <div id="banner">Your Local Time</div>
+    <div id="clock"></div>
+  </div>
+</body>
+
+<script>
+  const clock = document.querySelector('#clock')
+
+  setInterval( () => {
+    const date = new Date();
+
+    clock.innerHTML = date.toLocaleTimeString();
+  }, 1000)
+</script>
+</html>
